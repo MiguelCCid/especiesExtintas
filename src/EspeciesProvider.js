@@ -1,30 +1,25 @@
-import React, {createContext, useState, useEffect, Children} from "react";
+import React, { createContext, useState, useEffect } from "react";
 
 export const EspeciesContext = createContext();
 
-export const EspeciesProvider = ({children}) => {
-    const [data, setData] = useState([]);
+export const EspeciesProvider = ({ children }) => {
+  const [data, setData] = useState([]);
 
-    const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-        fetch("/especies.json") 
-            .then((response) => response.json()) 
-            .then((data) => {
-                setData(data); 
-                setLoading(false); 
-            })
-            .catch((error) => {
-                console.error("Error al cargar los datos:", error);
-                setLoading(false);
-            });
-    }, []);
+  useEffect(() => {
+    fetch("/especies.json")
+      .then((response) => response.json())
+      .then((data) => {
+        setData(data);
+      })
+      .catch((error) => {
+        console.error("Error al cargar los datos:", error);
+      });
+  }, []);
 
-    if (loading) return <p>Cargando datos...</p>;
-
-    return (
-        <EspeciesContext.Provider value={data}>
-            {children}
-        </EspeciesContext.Provider>
-    );
-}
+  return (
+    <EspeciesContext.Provider value={{ data }}>
+      {children}
+    </EspeciesContext.Provider>
+  );
+};
