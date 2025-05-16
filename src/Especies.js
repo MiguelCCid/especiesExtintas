@@ -1,11 +1,17 @@
 import React, { useContext, useState } from 'react';
 import { EspeciesContext } from './EspeciesProvider';
-import { Container, Row, Col, Card, Form } from 'react-bootstrap';
+import { Container, Row, Col, Card, Form, Modal } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
 const ListaEspecies = () => {
   const { data, loading } = useContext(EspeciesContext);
   const [filtroPeriodo, setFiltroPeriodo] = useState('');
   const [filtroHabitat, setFiltroHabitat] = useState('');
+  const navigate = useNavigate();
+
+  const handleMostrarDetalles = (especie) => {
+    navigate(`/especie/${especie.id}`);
+  };
 
   if (loading) return <p>Cargando especies...</p>;
 
@@ -58,7 +64,9 @@ const ListaEspecies = () => {
               <Card>
                 <Card.Img variant="top" src={`/imagenes/${especie.imagen}`} />
                 <Card.Body>
-                  <Card.Title>{especie.nombre}</Card.Title>
+                <Card.Title style={{ cursor: 'pointer' }} onClick={() => handleMostrarDetalles(especie)}>
+                  {especie.nombre}
+                </Card.Title>
                   <Card.Text>
                     <strong>Período:</strong> {especie.periodo}<br />
                     <strong>Hábitat:</strong> {especie.habitat}

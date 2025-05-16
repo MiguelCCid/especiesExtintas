@@ -1,12 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
 import ListaEspecies from './Especies';
 import { EspeciesProvider } from './EspeciesProvider';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import EspecieDetail from './EspeciesDetail';
 function App() {
   return (
     <div className="App">
       <EspeciesProvider>
-      <ListaEspecies/>
+        <Router>
+          <Routes>
+            <Route path='/' element={<ListaEspecies/>} ></Route>
+            <Route path='/especie/:id' element={<EspecieDetail/>} ></Route>
+            
+          </Routes>
+        </Router>
       </EspeciesProvider>
     </div>
   );
