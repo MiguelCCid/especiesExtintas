@@ -19,8 +19,12 @@ export const EspeciesProvider = ({ children }) => {
       });
   }, []);
 
+  const eliminarEspecie = (id) => {
+    setData(prev => prev.filter(e => e.id !== id));
+};
+
   return (
-    <EspeciesContext.Provider value={{ data, loading }}>
+    <EspeciesContext.Provider value={{ data, loading, eliminarEspecie }}>
       {children}
     </EspeciesContext.Provider>
   );

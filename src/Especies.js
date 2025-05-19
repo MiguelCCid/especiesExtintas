@@ -1,10 +1,10 @@
 import React, { useContext, useState } from 'react';
 import { EspeciesContext } from './EspeciesProvider';
-import { Container, Row, Col, Card, Form, Modal } from 'react-bootstrap';
+import { Container, Row, Col, Card, Form, Modal, Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 
 const ListaEspecies = () => {
-  const { data, loading } = useContext(EspeciesContext);
+  const { data, loading, eliminarEspecie } = useContext(EspeciesContext);
   const [filtroPeriodo, setFiltroPeriodo] = useState('');
   const [filtroHabitat, setFiltroHabitat] = useState('');
   const navigate = useNavigate();
@@ -72,6 +72,7 @@ const ListaEspecies = () => {
                     <strong>Hábitat:</strong> {especie.habitat}
                   </Card.Text>
                 </Card.Body>
+                <Button onClick={()=> eliminarEspecie(especie.id)}>Eliminar Especie</Button>
               </Card>
             </Col>
           ))
