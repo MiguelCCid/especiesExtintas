@@ -23,8 +23,12 @@ export const EspeciesProvider = ({ children }) => {
     setData(prev => prev.filter(e => e.id !== id));
 };
 
+const agregarEspecie = (nuevaEspecie) => {
+  setData(prev => [...prev, { ...nuevaEspecie, id: Date.now() }]);
+};
+
   return (
-    <EspeciesContext.Provider value={{ data, loading, eliminarEspecie }}>
+    <EspeciesContext.Provider value={{ data, loading, eliminarEspecie, agregarEspecie }}>
       {children}
     </EspeciesContext.Provider>
   );

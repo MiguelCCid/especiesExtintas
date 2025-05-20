@@ -28,6 +28,10 @@ const ListaEspecies = () => {
     );
   });
 
+  const AgregarEspecie = () => {
+    navigate("/agregar")
+  };
+
   return (
     <Container className="mt-4">
       <Form className="mb-4">
@@ -80,6 +84,7 @@ const ListaEspecies = () => {
           <p>No se encontraron especies con esos filtros.</p>
         )}
       </Row>
+      <Button onClick={AgregarEspecie}>Agregar Nueva Especie</Button>
     </Container>
   );
 };
