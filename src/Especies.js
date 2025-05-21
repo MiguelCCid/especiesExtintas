@@ -85,6 +85,8 @@ const ListaEspecies = () => {
         )}
       </Row>
       <Button onClick={AgregarEspecie}>Agregar Nueva Especie</Button>
+      <Button onClick={() => navigate("/mapa")}>Ver Mapa</Button>
+
     </Container>
   );
 };
