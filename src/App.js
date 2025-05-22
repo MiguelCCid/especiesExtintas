@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import EspecieDetail from './EspeciesDetail';
 import AgregarEspecie from "./AgregarEspecie";
 import MapaEspecies from './MapaEspecie';
+import LineaDeTiempo from './LineaDeTiempo';
 
 
 
@@ -20,6 +21,7 @@ function App() {
             <Route path='/' element={<ListaEspecies/>} ></Route>
             <Route path='/especie/:id' element={<EspecieDetail/>} ></Route>
             <Route path="/mapa" element={<MapaEspecies />} />
+            <Route path='/tiempo' element={<LineaDeTiempo/>}/>
           </Routes>
         </Router>
       </EspeciesProvider>
