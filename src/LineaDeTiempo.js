@@ -42,7 +42,7 @@ const LineaDeTiempo = () => {
           value={periodoSeleccionado}
           onChange={(e) => {
             setPeriodoSeleccionado(e.target.value);
-            setPeriodoClicado(null); // reset al cambiar el filtro manual
+            setPeriodoClicado(null); 
           }}
         >
           <option value="">Todos</option>

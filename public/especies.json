@@ -5,7 +5,7 @@
     "periodo": "Siglo XVII",
     "habitat": "Isla Mauricio",
     "causas": ["Caza", "Introducción de especies invasoras"],
-    "imagen": "dodo.jpg",
+    "imagen": "Dodo.jpg",
     "tipo_animal": "Ave"
   },
   {
@@ -14,7 +14,7 @@
     "periodo": "Siglo XX",
     "habitat": "Australia, Tasmania",
     "causas": ["Caza", "Pérdida de hábitat"],
-    "imagen": "tigre_tasmania.jpg",
+    "imagen": "Tigre.jpg",
     "tipo_animal": "Mamífero"
   },
   {
@@ -23,7 +23,7 @@
     "periodo": "Siglo XIX",
     "habitat": "Sudáfrica",
     "causas": ["Caza"],
-    "imagen": "quagga.jpg",
+    "imagen": "Quagga.jpg",
     "tipo_animal": "Mamífero"
   },
   {
@@ -32,7 +32,7 @@
     "periodo": "Siglo XX",
     "habitat": "América del Norte",
     "causas": ["Caza"],
-    "imagen": "paloma_migratoria.jpg",
+    "imagen": "Paloma.jpg",
     "tipo_animal": "Ave"
   },
   {
@@ -41,7 +41,7 @@
     "periodo": "Siglo XV",
     "habitat": "Nueva Zelanda",
     "causas": ["Caza", "Pérdida de hábitat"],
-    "imagen": "moa.jpg",
+    "imagen": "Moa.jpg",
     "tipo_animal": "Ave"
   },
   {
@@ -50,7 +50,7 @@
     "periodo": "Siglo XVII",
     "habitat": "Europa, Asia, Norte de África",
     "causas": ["Caza", "Pérdida de hábitat"],
-    "imagen": "aurochs.jpg",
+    "imagen": "Aurochs.jpg",
     "tipo_animal": "Mamífero"
   },
   {
@@ -59,7 +59,7 @@
     "periodo": "Siglo XX",
     "habitat": "Australia, Tasmania",
     "causas": ["Caza", "Pérdida de hábitat"],
-    "imagen": "tilacino.jpg",
+    "imagen": "Tilacino.jpg",
     "tipo_animal": "Mamífero"
   },
   {
@@ -68,7 +68,7 @@
     "periodo": "Siglo XIX",
     "habitat": "Atlántico Norte",
     "causas": ["Caza"],
-    "imagen": "gran_alca.jpg",
+    "imagen": "Alca.jpg",
     "tipo_animal": "Ave"
   },
   {
@@ -77,7 +77,7 @@
     "periodo": "Hace 4000 años",
     "habitat": "Siberia",
     "causas": ["Cambio climático", "Caza"],
-    "imagen": "mamut_lanudo.jpg",
+    "imagen": "Mamut.jpg",
     "tipo_animal": "Mamífero"
   },
   {
@@ -95,7 +95,7 @@
     "periodo": "Siglo XX",
     "habitat": "Estados Unidos, Cuba",
     "causas": ["Pérdida de hábitat", "Caza"],
-    "imagen": "pajaro_pico_marfil.jpg",
+    "imagen": "Pajaro.jpg",
     "tipo_animal": "Ave"
   },
   {
@@ -104,7 +104,7 @@
     "periodo": "Siglo XXI",
     "habitat": "Río Yangtsé, China",
     "causas": ["Contaminación", "Navegación", "Pesca"],
-    "imagen": "baiji.jpg",
+    "imagen": "Baiji.jpg",
     "tipo_animal": "Mamífero"
   }
 ]
