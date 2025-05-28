@@ -5,10 +5,10 @@ import {
 } from 'recharts';
 import { Form, Card, Row, Col } from 'react-bootstrap';
 
-const LineaDeTiempo = () => {
+const LineaDeTiempo = ({periodoInicial = null}) => {
   const { data } = useContext(EspeciesContext);
   const [periodoSeleccionado, setPeriodoSeleccionado] = useState('');
-  const [periodoClicado, setPeriodoClicado] = useState(null);
+  const [periodoClicado, setPeriodoClicado] = useState(periodoInicial);
 
   const periodosUnicos = [...new Set(data.map(e => e.periodo))].sort();
 

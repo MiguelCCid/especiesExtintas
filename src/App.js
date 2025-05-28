@@ -8,9 +8,6 @@ import MapaEspecies from './MapaEspecie';
 import LineaDeTiempo from './LineaDeTiempo';
 
 
-
-
-
 function App() {
   return (
     <div className="App">

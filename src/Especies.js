@@ -42,25 +42,35 @@ const ListaEspecies = () => {
       <Form className="mb-4 p-3 bg-light rounded shadow-sm">
         <Row className="g-3">
           <Col md={4}>
-            <Form.Group>
+            <Form.Group controlId="filtroPeriodo">
               <Form.Label>Filtrar por período</Form.Label>
-              <Form.Select value={filtroPeriodo} onChange={e => setFiltroPeriodo(e.target.value)}>
+              <Form.Select
+                value={filtroPeriodo}
+                onChange={e => setFiltroPeriodo(e.target.value)}
+              >
                 <option value="">Todos</option>
-                {periodos.map((p, i) => <option key={i} value={p}>{p}</option>)}
+                {periodos.map((p, i) => (
+                  <option key={i} value={p}>{p}</option>
+                ))}
               </Form.Select>
             </Form.Group>
           </Col>
           <Col md={4}>
-            <Form.Group>
+            <Form.Group controlId="filtroHabitat">
               <Form.Label>Filtrar por hábitat</Form.Label>
-              <Form.Select value={filtroHabitat} onChange={e => setFiltroHabitat(e.target.value)}>
+              <Form.Select
+                value={filtroHabitat}
+                onChange={e => setFiltroHabitat(e.target.value)}
+              >
                 <option value="">Todos</option>
-                {habitats.map((h, i) => <option key={i} value={h}>{h}</option>)}
+                {habitats.map((h, i) => (
+                  <option key={i} value={h}>{h}</option>
+                ))}
               </Form.Select>
             </Form.Group>
           </Col>
           <Col md={4}>
-            <Form.Group>
+            <Form.Group controlId="busqueda">
               <Form.Label>Buscar por nombre o causa</Form.Label>
               <Form.Control
                 type="text"
@@ -121,9 +131,9 @@ const ListaEspecies = () => {
       </Row>
 
       <div className="mt-4 d-flex gap-2 flex-wrap">
-        <Button  onClick={AgregarEspecie}> Agregar Nueva Especie</Button>
-        <Button  onClick={() => navigate("/mapa")}> Ver Mapa</Button>
-        <Button  onClick={() => navigate("/tiempo")}>Ver Línea de Tiempo</Button>
+        <Button onClick={AgregarEspecie}>Agregar Nueva Especie</Button>
+        <Button onClick={() => navigate("/mapa")}>Ver Mapa</Button>
+        <Button onClick={() => navigate("/tiempo")}>Ver Línea de Tiempo</Button>
       </div>
     </Container>
   );
